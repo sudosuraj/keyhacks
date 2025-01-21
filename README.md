@@ -36,6 +36,7 @@ KeyHacks shows methods to validate different API keys found on a Bug Bounty Prog
 - [Facebook AppSecret](#Facebook-AppSecret)
 - [Firebase](#Firebase)
 - [Firebase Cloud Messaging (FCM)](#Firebase-Cloud-Messaging)
+- [forethought](#forethought)
 - [FreshDesk API Key](#FreshDesk-API-key)
 - [Github client id and client secret](#Github-client-id-and-client-secret)
 - [GitHub private SSH key](#GitHub-private-SSH-key)
@@ -300,6 +301,13 @@ cd  enumerate-iam
 ## [MailGun Private Key](https://documentation.mailgun.com/en/latest/api_reference.html)
 ```
 curl --user 'api:YOUR_API_KEY' "https://api.mailgun.net/v3/domains"
+```
+
+## [FreshDesk_API_KEY](https://support.forethought.ai/hc/en-us/articles/35594893364755-Time-API-Guide#h_01JD3GEXQYKYX61ZXMYXH85B1D)
+```
+curl --path-as-is -i -s -k -X $'GET' \
+    -H $'Host: api.forethought.ai' -H $'X-Api-Key: API-KEY' -H $'Sec-Ch-Ua: \"Chromium\";v=\"127\", \"Not)A;Brand\";v=\"99\"' -H $'Sec-Ch-Ua-Mobile: ?0' -H $'Sec-Ch-Ua-Platform: \"Windows\"' -H $'Accept-Language: en-US' -H $'Upgrade-Insecure-Requests: 1' -H $'User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/127.0.6533.100 Safari/537.36' -H $'Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7' -H $'Sec-Fetch-Site: none' -H $'Sec-Fetch-Mode: navigate' -H $'Sec-Fetch-User: ?1' -H $'Sec-Fetch-Dest: document' -H $'Accept-Encoding: gzip, deflate, br' -H $'Priority: u=0, i' -H $'Connection: keep-alive' \
+    $'https://api.forethought.ai/time/current?timezone=America/New_York'
 ```
 
 ## [FreshDesk API Key](https://developers.freshdesk.com/api/#getting-started)
